@@ -1,0 +1,9 @@
+.dark {
+    background-image: radial-gradient(circle, #301934 0%, #49264F 0%, #301934 40%,  #100811 100%);
+
+    color: #fff;
+}
+
+.light {
+    background-image: radial-gradient(circle, #f9f6fb 0%, #fdeeee 40%, #f2faff 100%);
+}
