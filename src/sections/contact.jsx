@@ -47,11 +47,11 @@ const Contact = () => {
             {/* Social Links */}
             <div className="col-span-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <Link
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/thabith.24"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600
-            border border-pink-500 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105"
+            border border-pink-500 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
                         <Instagram className="w-[32px] sm:w-[40px] h-auto mr-3" />
@@ -60,11 +60,11 @@ const Contact = () => {
                 </Link>
 
                 <Link
-                    href="https://facebook.com"
+                    href="https://web.facebook.com/thabith.thabith.75436/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-[#00c6ff] to-[#0072ff]
-            border border-blue-500 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105"
+            border border-sky-400 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
                         <Facebook className="w-[32px] sm:w-[40px] h-auto mr-3" />
@@ -73,11 +73,11 @@ const Contact = () => {
                 </Link>
 
                 <Link
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/thabithshahulhameed"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-blue-950 to-[#0072ff]
-            border border-blue-500 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105"
+            border border-blue-500 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
                         <Linkedin className="w-[32px] sm:w-[40px] h-auto mr-3" />
@@ -86,11 +86,11 @@ const Contact = () => {
                 </Link>
 
                 <Link
-                    href="https://github.com"
+                    href="https://github.com/Thabith2001"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-gray-950 to-stone-700
-            border border-stone-600 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105"
+            border border-stone-400 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
                         <Github className="w-[32px] sm:w-[40px] h-auto mr-3" />
@@ -99,11 +99,11 @@ const Contact = () => {
                 </Link>
 
                 <Link
-                    href="mailto:yourmail@gmail.com"
+                    href="mailto:thabith20010909@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-red-800 via-red-600 to-yellow-400
-            border border-stone-300 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105"
+            border border-red-400 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
                         <Mail className="w-[32px] sm:w-[40px] h-auto mr-3" />
@@ -112,11 +112,11 @@ const Contact = () => {
                 </Link>
 
                 <Link
-                    href="https://wa.me/1234567890"
+                    href="https://wa.me/+94766553936"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-[#25D366] via-green-500 to-green-700
-            border border-stone-300 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105"
+            border border-green-300 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
                         <FaWhatsapp className="w-[32px] sm:w-[40px] h-auto mr-3" />
@@ -130,8 +130,14 @@ const Contact = () => {
             <div className="col-span-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
 
                 <div className="flex justify-start items-center">
-                    <div className="w-full space-y-6 p-6 border border-[#66356E] rounded-2xl shadow-md h-full">
-                        <h1>Hi</h1>
+                    <div className="w-full space-y-6 p-6  h-full">
+                        <div className="col-span-12 text-center mb-8">
+                            <h1 className="text-3xl font-bold text-[#66356E] text-shadow-md">Get in Touch</h1>
+                            <p className="text-sm sm:text-base text-gray-400 text-shadow-md mt-2 max-w-2xl mx-auto">
+                                I’m always open to new opportunities, collaborations, or just a friendly hello.
+                                Fill out the form and I’ll get back to you as soon as I can.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
