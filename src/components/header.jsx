@@ -65,7 +65,7 @@ export default function Header() {
                                     if (target) {
                                         target.scrollIntoView({ behavior: "smooth" });
                                     }
-                                    setIsOpen(false); // close mobile menu if open
+                                    setIsOpen(false);
                                 }}
                                 className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                                     isActive ? "underline underline-offset-4" : ""
@@ -81,7 +81,7 @@ export default function Header() {
                 {/* Right Section */}
                 <div className="flex items-center space-x-4">
                     {/* Theme Toggle */}
-                    <button
+                    <button aria-label="Toggle Theme"
                         className={`flex h-10 w-10 justify-center items-center bg-transparent transition border rounded-full shadow-md ${
                             theme ? "border-[#e7b4f3] shadow-[#e7b4f3]" : "border-[#66356E] shadow-[#66356E]"
                         }`}
@@ -111,6 +111,8 @@ export default function Header() {
 
                     {/* Mobile Menu Toggle */}
                     <button
+
+                       aria-label="Toggle Mobile Menu"
                         className="sm:hidden p-2 rounded-md bg-transparent transition"
                         onClick={() => setIsOpen(!isOpen)}
                     >
@@ -134,6 +136,7 @@ export default function Header() {
                         const isActive = activeSection === hash.replace("#", "");
                         return (
                             <button
+                                aria-label={`Go to ${label}`}
                                 key={label}
                                 onClick={() => {
                                     const target = document.querySelector(hash);

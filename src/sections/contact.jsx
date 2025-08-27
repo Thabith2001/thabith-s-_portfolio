@@ -2,9 +2,9 @@
 import React, {useContext, useRef, useState} from "react";
 import Link from "next/link";
 import {ThemeContext} from "@/helper/ThemesProvider";
-import {Instagram, Facebook, Linkedin, Github, Mail, ArrowDown, ArrowRight} from "lucide-react";
+import {LuInstagram, LuFacebook, LuLinkedin, LuGithub, LuMail, LuArrowDown, LuArrowRight} from "react-icons/lu";
 import {FaWhatsapp} from "react-icons/fa";
-import emailjs from "@emailjs/browser";
+import emailJs from "@emailjs/browser";
 
 const Contact = () => {
     const {theme} = useContext(ThemeContext);
@@ -17,7 +17,7 @@ const Contact = () => {
         setLoading(true);
         setStatus(null);
 
-        emailjs
+        emailJs
             .sendForm(
                 "service_fff9uko",
                 "template_it1djf8",
@@ -54,7 +54,7 @@ const Contact = () => {
             border border-pink-500 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
-                        <Instagram className="w-[32px] sm:w-[40px] h-auto mr-3"/>
+                        <LuInstagram className="w-[32px] sm:w-[40px] h-auto mr-3"/>
                         Instagram
                     </h3>
                 </Link>
@@ -67,7 +67,7 @@ const Contact = () => {
             border border-sky-400 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
-                        <Facebook className="w-[32px] sm:w-[40px] h-auto mr-3"/>
+                        <LuFacebook className="w-[32px] sm:w-[40px] h-auto mr-3"/>
                         Facebook
                     </h3>
                 </Link>
@@ -80,7 +80,7 @@ const Contact = () => {
             border border-blue-500 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
-                        <Linkedin className="w-[32px] sm:w-[40px] h-auto mr-3"/>
+                        <LuLinkedin className="w-[32px] sm:w-[40px] h-auto mr-3"/>
                         LinkedIn
                     </h3>
                 </Link>
@@ -93,7 +93,7 @@ const Contact = () => {
             border border-stone-400 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
-                        <Github className="w-[32px] sm:w-[40px] h-auto mr-3"/>
+                        <LuGithub className="w-[32px] sm:w-[40px] h-auto mr-3"/>
                         Github
                     </h3>
                 </Link>
@@ -106,7 +106,7 @@ const Contact = () => {
             border border-red-400 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
-                        <Mail className="w-[32px] sm:w-[40px] h-auto mr-3"/>
+                        <LuMail className="w-[32px] sm:w-[40px] h-auto mr-3"/>
                         Gmail
                     </h3>
                 </Link>
@@ -147,11 +147,11 @@ const Contact = () => {
                                 {/* Arrow under the heading */}
                                 <div className="mt-4">
                                     {/* Show Right arrow on larger screens */}
-                                    <ArrowRight
+                                    <LuArrowRight
                                         className={`hidden sm:block w-[100px] h-[100px] ${theme ? "text-[#e7b4f3]" : "text-[#66356E]"} `}/>
 
                                     {/* Show Down arrow on mobile */}
-                                    <ArrowDown
+                                    <LuArrowDown
                                         className={`block sm:hidden w-[100px] h-[100px] ${theme ? "text-[#e7b4f3]" : "text-[#66356E]"}`}/>
                                 </div>
                             </div>
@@ -167,7 +167,7 @@ const Contact = () => {
                         className="w-full space-y-6 p-6 border border-[#66356E] rounded-2xl shadow-md"
                     >
                         <div>
-                            <label className="block text-xs font-semibold uppercase mb-1 text-[#66356E]">
+                            <label htmlFor="name" className="block text-xs font-semibold uppercase mb-1 text-[#66356E]">
                                 Name (*)
                             </label>
                             <input
@@ -179,7 +179,7 @@ const Contact = () => {
                         </div>
 
                         <div>
-                            <label className="block text-xs font-semibold uppercase mb-1 text-[#66356E]">
+                            <label htmlFor="email" className="block text-xs font-semibold uppercase mb-1 text-[#66356E]">
                                 E-mail (*)
                             </label>
                             <input
@@ -191,7 +191,7 @@ const Contact = () => {
                         </div>
 
                         <div>
-                            <label className="block text-xs font-semibold uppercase mb-1 text-[#66356E]">
+                            <label htmlFor="comment" className="block text-xs font-semibold uppercase mb-1 text-[#66356E]">
                                 Comment (*)
                             </label>
                             <textarea
@@ -204,6 +204,7 @@ const Contact = () => {
 
                         <div>
                             <button
+                                aria-label="Submit"
                                 type="submit"
                                 disabled={loading}
                                 className={`w-full sm:w-auto flex items-center justify-center gap-2 
