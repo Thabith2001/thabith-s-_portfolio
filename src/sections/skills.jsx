@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 
 const Skill = () => {
     const skills = {
@@ -38,20 +37,18 @@ const Skill = () => {
                 SKILLS
             </h1>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 ">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
                 {Object.keys(skills).map((key, index) => (
-                    <div
-                        key={index}
-                    >
-                        <div className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 transition-transform hover:scale-150 active:scale-150">
-                            <Image
+                    <div key={index}>
+                        <div className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 flex justify-center items-center transition-transform hover:scale-150 active:scale-150">
+                            <img
                                 alt={skills[key].alt}
                                 src={skills[key].src}
-                                layout="fill"
-                                objectFit="contain"
                             />
                         </div>
-                        <p className="text-sm sm:text-base mt-3 capitalize">{key.replace("_", " ")}</p>
+                        <p className="text-sm sm:text-base mt-3 text-center capitalize">
+                            {key.replace("_", " ")}
+                        </p>
                     </div>
                 ))}
             </div>
@@ -61,25 +58,28 @@ const Skill = () => {
                 IDEAs
             </h1>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
                 {Object.keys(idea).map((key, index) => (
-                    <div
-                        key={index}
-                    >
+                    <div key={index} className="flex flex-col items-center">
                         {idea[key].src ? (
-                            <div className="relative w-20 h-20 sm:w-24 sm:h-24 transition-transform hover:scale-150 active:scale-150">
-                                <Image alt={idea[key].alt} src={idea[key].src} layout="fill" objectFit="contain"/>
+                            <div className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 flex justify-center items-center transition-transform hover:scale-150 active:scale-150">
+                                <img
+                                    alt={idea[key].alt}
+                                    src={idea[key].src}
+                                />
                             </div>
                         ) : (
-                            <div
-                                className="w-20 h-20 mt-10 sm:w-24 sm:h-24 flex items-center justify-center text-xs text-gray-500">
+                            <div className="w-20 h-20 mt-10 sm:w-24 sm:h-24 flex items-center justify-center text-xs text-gray-500 border border-dashed border-gray-300">
                                 No Image
                             </div>
                         )}
-                        <p className="text-sm sm:text-base mt-3 capitalize">{key.replace("_", " ")}</p>
+                        <p className="text-sm sm:text-base mt-3 text-center capitalize">
+                            {key.replace("_", " ")}
+                        </p>
                     </div>
                 ))}
             </div>
+
         </section>
     );
 };
