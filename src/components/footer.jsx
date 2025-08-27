@@ -4,7 +4,6 @@ import {ThemeContext} from "@/helper/ThemesProvider";
 
 const Footer = () => {
     const {theme, setTheme} = useContext(ThemeContext);
-    console.log(theme);
     return (
         <footer
             className="sm:col-span-9 col-span-12 border-t-2 border-transparent w-full h-16 flex items-center justify-center gap-4"
