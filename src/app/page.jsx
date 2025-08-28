@@ -1,9 +1,10 @@
 "use client"
-import React, {useState} from "react";
+import React from "react";
 import Home from "@/sections/home";
 import Contact from "@/sections/contact";
 import Skill from "@/sections/skills";
 import About from "@/sections/about";
+import Achievements from "@/sections/achievements";
 
 
 export default function Frame() {
@@ -13,6 +14,7 @@ export default function Frame() {
             <Home/>
             <About/>
             <Skill/>
+            <Achievements/>
             <Contact/>
 
         </main>

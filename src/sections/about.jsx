@@ -34,7 +34,7 @@ const About = () => {
                             <h2 className={`text-2xl font-bold mb-6  text-shadow-md text-gray-300  ${theme?"text-shadow-fuchsia-600":"text-shadow-fuchsia-800"}`}>
                                 Personal Details
                             </h2>
-                            <div className={`space-y-4 ${theme ? "text-gray-200" : "text-[#222]"}`}>
+                            <div className={`space-y-4 ${theme ? "text-gray-200" : "text-gray-500"}`}>
                                 <p>
                                     <span className="font-semibold text-[#66356E]">Name:</span> Mohamed Thabith
                                 </p>
@@ -66,9 +66,9 @@ const About = () => {
                     </h2>
 
                     {/* Intro Paragraphs */}
-                    <div className={`space-y-4 text-lg leading-relaxed ${theme ? "text-gray-200" : "text-[#222]"}`}>
+                    <div className={`space-y-4 text-lg leading-relaxed ${theme ? "text-gray-200" : "text-gray-500"}`}>
                         <p>
-                            I’m a passionate  <span className="font-semibold text-[#66356E] text-shadow-md text-shadow-gray-400">Software Engineer</span>  with
+                            I’m a passionate  <span className="font-semibold text-[#66356E] text-shadow-md text-shadow-gray-400 px-1">Software Engineer</span>  with
                             experience in <span className="font-semibold">Java, Spring Boot, SQL, React, and Agile development</span>.
                             I love building clean, scalable, and user-friendly applications that solve real-world problems.
                         </p>
@@ -83,7 +83,7 @@ const About = () => {
                         <div>
                             <div className="text-3xl mb-2">🚀</div>
                             <h3 className={`text-lg font-semibold  text-shadow-md text-gray-300  ${theme?"text-shadow-fuchsia-600":"text-shadow-fuchsia-800"}`}>Experience</h3>
-                            <p className={`${theme ? "text-gray-300" : "text-[#222]"} mt-1`}>
+                            <p className={`${theme ? "text-gray-300" : "text-gray-500"} mt-1`}>
                                 Fresh Graduate in <span className="font-medium">Software Engineering</span>
                             </p>
                         </div>
@@ -91,14 +91,14 @@ const About = () => {
                         <div>
                             <div className="text-3xl mb-2">⚡</div>
                             <h3 className={`text-lg font-semibold  text-shadow-md text-gray-300  ${theme?"text-shadow-fuchsia-600":"text-shadow-fuchsia-800"}`}>Skills</h3>
-                            <p className={`${theme ? "text-gray-300" : "text-[#222]"} mt-1`}>Java, Spring Boot, React, SQL</p>
+                            <p className={`${theme ? "text-gray-300" : "text-gray-500"} mt-1`}>Java, Spring Boot, React, SQL</p>
                         </div>
 
                         <div>
                             <div className="text-3xl mb-2">🎯</div>
                             <h3 className={`text-lg font-semibold  text-shadow-md text-gray-300  ${theme?"text-shadow-fuchsia-600":"text-shadow-fuchsia-800"}`}>Goals</h3>
-                            <p className={`${theme ? "text-gray-300" : "text-[#222]"} mt-1`}>
-                                To grow as a <span className="font-medium">Full-Stack Developer</span>.
+                            <p className={`${theme ? "text-gray-300" : "text-gray-500"} mt-1`}>
+                                To grow as a <span className="font-medium">Full-Stack Developer | Software Engineering</span>.
                             </p>
                         </div>
                     </div>

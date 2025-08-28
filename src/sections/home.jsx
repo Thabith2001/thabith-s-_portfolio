@@ -3,10 +3,9 @@ import React, {useContext} from "react";
 import Image from "next/image";
 import { Download } from "lucide-react";
 import {ThemeContext} from "@/helper/ThemesProvider";
-import Link from "next/link";
 
 const Home = () => {
-    const{theme,setTheme}=useContext(ThemeContext);
+    const{theme}=useContext(ThemeContext);
     return (
         <section
             id="home"
@@ -33,7 +32,7 @@ const Home = () => {
 
                 {/* Tagline */}
                 <p className={`mt-4 text-lg sm:text-xl md:text-2xl tracking-wide ${theme?" text-sub-outline-dark":" text-sub-outline-light"}`}>
-                    Full-Stack Developer | Java | React | Next.js
+                    Full-Stack Developer | Software Engineering
                 </p>
 
                 {/* Download CV Button */}

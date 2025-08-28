@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, {useContext} from "react";
+import {ThemeContext} from "@/helper/ThemesProvider";
 
 const Skill = () => {
     const skills = {
@@ -30,6 +31,7 @@ const Skill = () => {
         dbeaver: {alt: "Dbeaver Logo", src: "/tech_icons/dbeaver_i.png"},
     };
 
+    const {theme, setTheme} = useContext(ThemeContext);
     return (
         <section id="skill" className="w-full max-w-7xl mx-auto px-4 py-8">
             {/* Skills */}
@@ -37,16 +39,18 @@ const Skill = () => {
                 SKILLS
             </h1>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
+            <div
+                className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
                 {Object.keys(skills).map((key, index) => (
                     <div key={index}>
-                        <div className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 flex justify-center items-center transition-transform hover:scale-150 active:scale-150">
+                        <div
+                            className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 flex justify-center items-center transition-transform hover:scale-150 active:scale-150">
                             <img
                                 alt={skills[key].alt}
                                 src={skills[key].src}
                             />
                         </div>
-                        <p className="text-sm sm:text-base mt-3 text-center capitalize">
+                        <p className={`text-sm sm:text-base mt-3 text-center capitalize ${theme ? "text-gray-200" : "text-gray-500"}`}>
                             {key.replace("_", " ")}
                         </p>
                     </div>
@@ -55,25 +59,28 @@ const Skill = () => {
 
             {/* IDEs */}
             <h1 className="text-center text-4xl sm:text-5xl font-bold border-b pb-4 border-[#66356E] text-outline uppercase tracking-widest mb-6 mt-20">
-                IDEAs
+                IDE<span className="lowercase">'s</span>
             </h1>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
+            <div
+                className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
                 {Object.keys(idea).map((key, index) => (
-                    <div key={index} className="flex flex-col items-center">
+                    <div key={index} className="flex flex-col items-center ">
                         {idea[key].src ? (
-                            <div className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 flex justify-center items-center transition-transform hover:scale-150 active:scale-150">
+                            <div
+                                className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 flex justify-center items-center transition-transform hover:scale-150 active:scale-150">
                                 <img
                                     alt={idea[key].alt}
                                     src={idea[key].src}
                                 />
                             </div>
                         ) : (
-                            <div className="w-20 h-20 mt-10 sm:w-24 sm:h-24 flex items-center justify-center text-xs text-gray-500 border border-dashed border-gray-300">
+                            <div
+                                className="w-20 h-20 mt-10 sm:w-24 sm:h-24 flex items-center justify-center text-xs text-gray-500 border border-dashed border-gray-300">
                                 No Image
                             </div>
                         )}
-                        <p className="text-sm sm:text-base mt-3 text-center capitalize">
+                        <p className={`text-sm sm:text-base mt-3 text-center capitalize ${theme ? "text-gray-200" : "text-gray-500"}`}>
                             {key.replace("_", " ")}
                         </p>
                     </div>

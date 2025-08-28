@@ -63,7 +63,7 @@ const Contact = () => {
                     href="https://web.facebook.com/thabith.thabith.75436/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-[#00c6ff] to-[#0072ff]
+                    className="bg-gradient-to-r from-sky-700 via-blue-600 to-blue-900
             border border-sky-400 rounded-2xl p-6 flex items-center justify-center transition-transform hover:scale-105 active:scale-105"
                 >
                     <h3 className="flex items-center justify-center text-xl sm:text-2xl lg:text-3xl text-white font-semibold">
@@ -134,7 +134,7 @@ const Contact = () => {
                         <div className="col-span-12 text-center mb-8">
                             <h1 className={`text-3xl font-bold   text-shadow-md text-gray-300  ${theme?"text-shadow-fuchsia-600":"text-shadow-fuchsia-800"}`}>Get
                                 in Touch</h1>
-                            <p className={`text-sm sm:text-base  text-shadow-md mt-2 max-w-2xl mx-auto ${theme ? "text-gray-200" : "text-[#222]"}`}>
+                            <p className={`text-sm sm:text-base  text-shadow-md mt-2 max-w-2xl mx-auto ${theme ? "text-gray-200" : "text-gray-500"}`}>
                                 I’m always open to new opportunities, collaborations, or just a friendly hello.
                                 Fill out the form and I’ll get back to you as soon as I can.
                             </p>
@@ -148,11 +148,11 @@ const Contact = () => {
                                 <div className="mt-4">
                                     {/* Show Right arrow on larger screens */}
                                     <LuArrowRight
-                                        className={`hidden sm:block w-[100px] h-[100px] stroke-3 ${theme ? "text-[#e7b4f3]" : "text-[#66356E]"} `}/>
+                                        className="hidden sm:block w-[100px] h-[100px] stroke-3 text-[#9F36AF] animate-bounce [animation-delay:-0.5s] [animation-duration:1.5s] [animation-iteration-count:infinite] [animation-direction:alternate] [animation-timing-function:ease-in-out] [animation-fill-mode:forwards] [animation-play-state:running] [animation-name:bounce]"/>
 
                                     {/* Show Down arrow on mobile */}
                                     <LuArrowDown
-                                        className={`block sm:hidden w-[100px] h-[100px] stroke-3 ${theme ? "text-[#e7b4f3]" : "text-[#66356E]"}`}/>
+                                        className="block sm:hidden w-[100px] h-[100px] stroke-3 text-[#9F36AF] animate-bounce [animation-delay:-0.5s] [animation-duration:1.5s] [animation-iteration-count:infinite] [animation-direction:alternate] [animation-timing-function:ease-in-out] [animation-fill-mode:forwards] [animation-play-state:running] [animation-name:bounce]"/>
                                 </div>
                             </div>
                         </div>

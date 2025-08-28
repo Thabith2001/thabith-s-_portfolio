@@ -46,10 +46,7 @@ export default function Header() {
 
                 {/* Logo */}
                 <h1 className="text-3xl font-bold text-outline text-shadow-gray-500 text-shadow-lg hover:cursor-pointer active:cursor-pointer" onClick={() => {
-                    const target = document.querySelector("#home");
-                    if (target) {
-                        target.scrollIntoView({ behavior: "smooth" });
-                    }
+                       window.location.href = "/";
                 }}>
                     Thabith.dev
                 </h1>
