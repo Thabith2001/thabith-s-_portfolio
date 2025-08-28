@@ -39,7 +39,7 @@ const Home = () => {
                 {/* Download CV Button */}
                 <div className="mt-10" >
                     <Link
-                        href="/resume/mohamed_thabithsoftware_engineering.pdf"
+                        href="/resume/mohamed_thabith_software_engineering.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         download="MohamedThabith-CV.pdf"
