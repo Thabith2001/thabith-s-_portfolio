@@ -45,7 +45,12 @@ export default function Header() {
             <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
 
                 {/* Logo */}
-                <h1 className="text-3xl font-bold text-outline text-shadow-gray-500 text-shadow-lg">
+                <h1 className="text-3xl font-bold text-outline text-shadow-gray-500 text-shadow-lg hover:cursor-pointer active:cursor-pointer" onClick={() => {
+                    const target = document.querySelector("#home");
+                    if (target) {
+                        target.scrollIntoView({ behavior: "smooth" });
+                    }
+                }}>
                     Thabith.dev
                 </h1>
 

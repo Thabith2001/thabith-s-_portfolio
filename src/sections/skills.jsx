@@ -4,7 +4,7 @@ import React from "react";
 const Skill = () => {
     const skills = {
         java: {alt: "Java Logo", src: "/tech_icons/java_i.png"},
-        javascript: {alt: "JavaScript Logo", src: "/tech_icons/javaScript_i.png"},
+        javascript: {alt: "JavaScript Logo", src: "/tech_icons/javascript_i.png"},
         html: {alt: "HTML Logo", src: "/tech_icons/html5_i.png"},
         css: {alt: "CSS Logo", src: "/tech_icons/css3_i.png"},
         react: {alt: "React Logo", src: "/tech_icons/react_i.png"},
@@ -24,7 +24,7 @@ const Skill = () => {
         git: {alt: "Git Logo", src: "/tech_icons/git_i.png"},
         netbeans: {alt: "NetBeans Logo", src: "/tech_icons/netbeans_i.png"},
         eclipse: {alt: "Eclipse Logo", src: "/tech_icons/eclipse_i.png"},
-        android_studio: {alt: "Android Studio Logo", src: "/tech_icons/androidStudio_i.png"},
+        android_studio: {alt: "Android Studio Logo", src: "/tech_icons/androidstudio_i.png"},
         web_storm: {alt: "WebStorm Logo", src: "/tech_icons/webstorm_i.png"},
         phpstorm: {alt: "PhpStorm Logo", src: "/tech_icons/phpstorm_i.png"},
         dbeaver: {alt: "Dbeaver Logo", src: "/tech_icons/dbeaver_i.png"},

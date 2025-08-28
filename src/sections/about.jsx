@@ -61,14 +61,14 @@ const About = () => {
 
                 {/* Introduction and Highlights */}
                 <div className="flex flex-col justify-center p-6">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#66356E] mb-4">
+                    <h2 className={`text-3xl sm:text-4xl font-bold text-gray-300 text-shadow-lg mb-4 ${theme?"text-shadow-fuchsia-600":"text-shadow-fuchsia-800"}`}>
                         Hi, I'm Thabith 👋
                     </h2>
 
                     {/* Intro Paragraphs */}
                     <div className={`space-y-4 text-lg leading-relaxed ${theme ? "text-gray-200" : "text-[#222]"}`}>
                         <p>
-                            I’m a passionate <span className="font-semibold text-[#66356E]">Software Engineer</span> with
+                            I’m a passionate  <span className="font-semibold text-[#66356E] text-shadow-md text-shadow-gray-400">Software Engineer</span>  with
                             experience in <span className="font-semibold">Java, Spring Boot, SQL, React, and Agile development</span>.
                             I love building clean, scalable, and user-friendly applications that solve real-world problems.
                         </p>
