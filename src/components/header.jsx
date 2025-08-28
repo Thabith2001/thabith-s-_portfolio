@@ -14,9 +14,9 @@ export default function Header() {
     const navItems = {
         Home: "#home",
         About: "#about",
+        Skills: "#skill",
         Projects: "#projects",
         Achievements: "#achievements",
-        Skills: "#skill",
         Contact: "#contact",
     };
 

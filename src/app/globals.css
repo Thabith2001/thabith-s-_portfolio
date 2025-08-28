@@ -5,6 +5,16 @@
      color: #66356E;
  }
 
+ .text-sub-outline-dark {
+     -webkit-text-stroke: 1px white;
+     color: #222;
+ }
+
+ .text-sub-outline-light {
+     -webkit-text-stroke: 1px #222;
+     color: #f2faff;
+ }
+
  @keyframes float {
      0% {
          transform: translateY(0px) rotate(0deg);

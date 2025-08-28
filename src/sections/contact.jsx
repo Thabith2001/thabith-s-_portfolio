@@ -132,27 +132,27 @@ const Contact = () => {
                 <div className="flex justify-start items-center">
                     <div className="w-full space-y-6 p-6  h-full">
                         <div className="col-span-12 text-center mb-8">
-                            <h1 className={`text-3xl font-bold text-[#66356E] text-shadow-md ${theme ? "text-[#e7b4f3]" : "text-[#66356E]"}`}>Get
+                            <h1 className={`text-3xl font-bold   text-shadow-md text-gray-300  ${theme?"text-shadow-fuchsia-600":"text-shadow-fuchsia-800"}`}>Get
                                 in Touch</h1>
-                            <p className={`text-sm sm:text-base  text-shadow-md mt-2 max-w-2xl mx-auto ${theme ? "text-gray-400" : "text-[#222]"}`}>
+                            <p className={`text-sm sm:text-base  text-shadow-md mt-2 max-w-2xl mx-auto ${theme ? "text-gray-200" : "text-[#222]"}`}>
                                 I’m always open to new opportunities, collaborations, or just a friendly hello.
                                 Fill out the form and I’ll get back to you as soon as I can.
                             </p>
                             <div className="flex flex-col items-center mt-20 text-center">
                                 {/* Heading */}
-                                <h1 className="text-6xl font-bold text-outline text-shadow-md">
-                                    Thabith.dev
+                                <h1 className={`text-6xl font-bold text-outline text-shadow-md ${theme?" text-sub-outline-dark":" text-sub-outline-light"}`}>
+                                    Thabith <span className="text-[#9F36AF]">.dev</span>
                                 </h1>
 
                                 {/* Arrow under the heading */}
                                 <div className="mt-4">
                                     {/* Show Right arrow on larger screens */}
                                     <LuArrowRight
-                                        className={`hidden sm:block w-[100px] h-[100px] ${theme ? "text-[#e7b4f3]" : "text-[#66356E]"} `}/>
+                                        className={`hidden sm:block w-[100px] h-[100px] stroke-3 ${theme ? "text-[#e7b4f3]" : "text-[#66356E]"} `}/>
 
                                     {/* Show Down arrow on mobile */}
                                     <LuArrowDown
-                                        className={`block sm:hidden w-[100px] h-[100px] ${theme ? "text-[#e7b4f3]" : "text-[#66356E]"}`}/>
+                                        className={`block sm:hidden w-[100px] h-[100px] stroke-3 ${theme ? "text-[#e7b4f3]" : "text-[#66356E]"}`}/>
                                 </div>
                             </div>
                         </div>

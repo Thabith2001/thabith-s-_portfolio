@@ -27,12 +27,12 @@ const Home = () => {
             {/* Text + Button - FOREGROUND */}
             <div className="relative z-20 text-center px-4">
                 {/* Branding */}
-                <h1 className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold  drop-shadow-lg tracking-wide${theme?" text-white":" text-[#222]"}`}>
+                <h1 className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold  drop-shadow-lg tracking-wide${theme?" text-sub-outline-dark":" text-sub-outline-light"}`}>
                     Thabith<span className="text-[#9F36AF]">.dev</span>
                 </h1>
 
                 {/* Tagline */}
-                <p className={`mt-4 text-lg sm:text-xl md:text-2xl tracking-wide ${theme?" text-white":" text-[#222]"}`}>
+                <p className={`mt-4 text-lg sm:text-xl md:text-2xl tracking-wide ${theme?" text-sub-outline-dark":" text-sub-outline-light"}`}>
                     Full-Stack Developer | Java | React | Next.js
                 </p>
 
