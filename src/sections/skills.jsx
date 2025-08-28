@@ -1,37 +1,15 @@
 "use client";
-import React, {useContext} from "react";
-import {ThemeContext} from "@/helper/ThemesProvider";
+import React, { useContext } from "react";
+import { ThemeContext } from "@/helper/ThemesProvider";
+import { skills_data, ideas_data } from "@/data/skills_data";
 
 const Skill = () => {
-    const skills = {
-        java: {alt: "Java Logo", src: "/tech_icons/java_i.png"},
-        javascript: {alt: "JavaScript Logo", src: "/tech_icons/javascript_i.png"},
-        html: {alt: "HTML Logo", src: "/tech_icons/html5_i.png"},
-        css: {alt: "CSS Logo", src: "/tech_icons/css3_i.png"},
-        react: {alt: "React Logo", src: "/tech_icons/react_i.png"},
-        nextjs: {alt: "Next.js Logo", src: "/tech_icons/nextjs_i.png"},
-        tailwind: {alt: "Tailwind CSS Logo", src: "/tech_icons/tailwind_i.png"},
-        bootstrap: {alt: "Bootstrap Logo", src: "/tech_icons/bootstrap_i.png"},
-        mongodb: {alt: "MongoDB Logo", src: "/tech_icons/mongodb_i.png"},
-        mysql: {alt: "MySQL Logo", src: "/tech_icons/mysql_i.png"},
-        spring_boot: {alt: "Spring Boot Logo", src: "/tech_icons/spring_i.png"},
-        hibernate: {alt: "Hibernate Logo", src: "/tech_icons/hibernate_i.png"},
-        php: {alt: "PHP Logo", src: "/tech_icons/php_i.png"},
-    };
+    const { theme } = useContext(ThemeContext);
 
-    const idea = {
-        intellij: {alt: "IntelliJ Logo", src: "/tech_icons/intellijidea_i.png"},
-        vscode: {alt: "Visual Studio Code Logo", src: "/tech_icons/vscode_i.png"},
-        git: {alt: "Git Logo", src: "/tech_icons/git_i.png"},
-        netbeans: {alt: "NetBeans Logo", src: "/tech_icons/netbeans_i.png"},
-        eclipse: {alt: "Eclipse Logo", src: "/tech_icons/eclipse_i.png"},
-        android_studio: {alt: "Android Studio Logo", src: "/tech_icons/androidstudio_i.png"},
-        web_storm: {alt: "WebStorm Logo", src: "/tech_icons/webstorm_i.png"},
-        phpstorm: {alt: "PhpStorm Logo", src: "/tech_icons/phpstorm_i.png"},
-        dbeaver: {alt: "Dbeaver Logo", src: "/tech_icons/dbeaver_i.png"},
-    };
+    // Convert object to array of [key, value]
+    const skillsArray = Object.entries(skills_data[0]);
+    const ideasArray = Object.entries(ideas_data[0]);
 
-    const {theme, setTheme} = useContext(ThemeContext);
     return (
         <section id="skill" className="w-full max-w-7xl mx-auto px-4 py-8">
             {/* Skills */}
@@ -39,19 +17,18 @@ const Skill = () => {
                 SKILLS
             </h1>
 
-            <div
-                className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
-                {Object.keys(skills).map((key, index) => (
-                    <div key={index}>
-                        <div
-                            className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 flex justify-center items-center transition-transform hover:scale-150 active:scale-150">
-                            <img
-                                alt={skills[key].alt}
-                                src={skills[key].src}
-                            />
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
+                {skillsArray.map(([name, skill], index) => (
+                    <div key={index} className="flex flex-col items-center">
+                        <div className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 flex justify-center items-center transition-transform hover:scale-150 active:scale-150">
+                            <img alt={skill.alt} src={skill.src} />
                         </div>
-                        <p className={`text-sm sm:text-base mt-3 text-center capitalize ${theme ? "text-gray-200" : "text-gray-500"}`}>
-                            {key.replace("_", " ")}
+                        <p
+                            className={`text-sm sm:text-base mt-3 text-center capitalize ${
+                                theme ? "text-gray-200" : "text-gray-500"
+                            }`}
+                        >
+                            {name.replace("_", " ")}
                         </p>
                     </div>
                 ))}
@@ -62,31 +39,28 @@ const Skill = () => {
                 IDE<span className="lowercase">'s</span>
             </h1>
 
-            <div
-                className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
-                {Object.keys(idea).map((key, index) => (
-                    <div key={index} className="flex flex-col items-center ">
-                        {idea[key].src ? (
-                            <div
-                                className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 flex justify-center items-center transition-transform hover:scale-150 active:scale-150">
-                                <img
-                                    alt={idea[key].alt}
-                                    src={idea[key].src}
-                                />
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 justify-items-center">
+                {ideasArray.map(([name, idea], index) => (
+                    <div key={index} className="flex flex-col items-center">
+                        {idea.src ? (
+                            <div className="relative w-20 h-20 mt-10 sm:w-24 sm:h-24 flex justify-center items-center transition-transform hover:scale-150 active:scale-150">
+                                <img alt={idea.alt} src={idea.src} />
                             </div>
                         ) : (
-                            <div
-                                className="w-20 h-20 mt-10 sm:w-24 sm:h-24 flex items-center justify-center text-xs text-gray-500 border border-dashed border-gray-300">
+                            <div className="w-20 h-20 mt-10 sm:w-24 sm:h-24 flex items-center justify-center text-xs text-gray-500 border border-dashed border-gray-300">
                                 No Image
                             </div>
                         )}
-                        <p className={`text-sm sm:text-base mt-3 text-center capitalize ${theme ? "text-gray-200" : "text-gray-500"}`}>
-                            {key.replace("_", " ")}
+                        <p
+                            className={`text-sm sm:text-base mt-3 text-center capitalize ${
+                                theme ? "text-gray-200" : "text-gray-500"
+                            }`}
+                        >
+                            {name.replace("_", " ")}
                         </p>
                     </div>
                 ))}
             </div>
-
         </section>
     );
 };

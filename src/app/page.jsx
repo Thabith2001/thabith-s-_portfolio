@@ -5,6 +5,7 @@ import Contact from "@/sections/contact";
 import Skill from "@/sections/skills";
 import About from "@/sections/about";
 import Achievements from "@/sections/achievements";
+import Projects from "@/sections/projects";
 
 
 export default function Frame() {
@@ -14,6 +15,7 @@ export default function Frame() {
             <Home/>
             <About/>
             <Skill/>
+           <Projects/>
             <Achievements/>
             <Contact/>
 
