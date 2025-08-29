@@ -23,7 +23,7 @@ const Projects = () => {
                     {projects_data.map((project) => (
                         <div
                             key={project.id}
-                            className={`rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 flex flex-col ${
+                            className={`rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 active:scale-105 transition duration-300 flex flex-col ${
                                 theme ? "bg-[#66356E]/20" : "bg-gray-400/20"
                             }`}
                         >
@@ -65,8 +65,8 @@ const Projects = () => {
                                             rel="noopener noreferrer"
                                             className={`px-4 py-2 rounded-lg border border-[#66356E] transition ${
                                                 theme
-                                                    ? "text-sub-outline-dark hover:bg-[#66356E] hover:text-white"
-                                                    : "text-sub-outline-light hover:bg-[#66356E] hover:text-white"
+                                                    ? "text-sub-outline-dark hover:bg-[#66356E] active:bg-[#66356E] hover:text-white active:text-white"
+                                                    : "text-sub-outline-light hover:bg-[#66356E] active:bg-[#66356E] hover:text-white active:text-white"
                                             }`}
                                         >
                                             Live Demo
@@ -85,8 +85,8 @@ const Projects = () => {
                                         rel="noopener noreferrer"
                                         className={`px-4 py-2 rounded-lg border border-[#66356E] transition ${
                                             theme
-                                                ? "text-sub-outline-dark hover:bg-[#66356E] hover:text-white"
-                                                : "text-sub-outline-light hover:bg-[#66356E] hover:text-white"
+                                                ? "text-sub-outline-dark hover:bg-[#66356E] active:bg-[#66356E] hover:text-white active:text-white"
+                                                : "text-sub-outline-light hover:bg-[#66356E] active:bg-[#66356E] hover:text-white active:text-white"
                                         }`}
                                     >
                                         Code
