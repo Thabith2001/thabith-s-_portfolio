@@ -8,9 +8,7 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className={`py-12 bg-transparent ${
-                theme ? "text-sub-outline-dark" : "text-sub-outline-light"
-            }`}
+            className="py-12 bg-transparent"
         >
             <div className="max-w-6xl mx-auto px-4">
                 {/* Title */}
@@ -36,11 +34,11 @@ const Projects = () => {
 
                             {/* Content */}
                             <div className="p-6 flex flex-col flex-grow">
-                                <h3 className="text-xl font-semibold mb-2">
+                                <h3 className={`text-xl font-semibold mb-2 ${theme ? "text-sub-outline-dark" : "text-sub-outline-light"}`}>
                                     {project.title}
                                 </h3>
 
-                                <p className="text-sm mb-4 flex-grow">
+                                <p className={`text-sm mb-4 flex-grow ${theme ? "text-gray-200" : "text-gray-500"}`}>
                                     {project.description}
                                 </p>
 
@@ -49,7 +47,7 @@ const Projects = () => {
                                     {project.tags.map((tag, i) => (
                                         <span
                                             key={i}
-                                            className="px-3 py-1 bg-[#66356E] text-white text-xs rounded-full"
+                                            className={`px-3 py-1 bg-[#66356E]  text-xs rounded-full ${theme ? "text-sub-outline-dark" : "text-sub-outline-light"}`}
                                         >
                       {tag}
                     </span>
