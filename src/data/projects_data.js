@@ -38,6 +38,6 @@ export const projects_data = [
         tags: ['Next.js', 'Tailwind CSS', 'React'],
         image: '/images/portfolio_i.png',
         codeLink: 'https://github.com/Thabith2001/thabith-s-_portfolio',
-        deployLink: 'https://thabithportfolio-beryl.vercel.app/',
+        deployLink: 'https://thabith.vercel.app/',
     }
 ];
